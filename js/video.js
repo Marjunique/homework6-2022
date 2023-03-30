@@ -18,13 +18,13 @@ document.querySelector("#pause").addEventListener("click", function() {
 document.querySelector("#slower").addEventListener("click", function() {
 	console.log("Slow Down");
 	video.playbackRate *= 0.95;
-	console.log("Playback rate is" + video.playbackrate);
+	console.log("Playback rate is" + video.playbackRate);
 
 });
 document.querySelector("#faster").addEventListener("click", function() {
 	console.log("Speed Up");
 	video.playbackRate /= 0.95;
-	console.log("Playback rate is" + video.playbackrate);
+	console.log("Playback rate is" + video.playbackRate);
 
 });
 
@@ -36,4 +36,10 @@ document.querySelector("#mute").addEventListener("click", function() {
 	else{
 	video.muted= false
 	this.innerHTML = "Mute"}
+});
+document.querySelector("#slider").addEventListener("change", function() {
+	console.log(this.value)
+	video.volume= this.value/100
+
+
 });
