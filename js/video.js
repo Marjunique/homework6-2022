@@ -8,6 +8,8 @@ window.addEventListener("load", function() {
  document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play()
+	console.log(video.volume)
+	document.querySelector("#volume").innerHTML= video.volume*100 + "%"
 });
 
 document.querySelector("#pause").addEventListener("click", function() {
@@ -40,6 +42,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 document.querySelector("#slider").addEventListener("change", function() {
 	console.log(this.value)
 	video.volume= this.value/100
+	document.querySelector("#volume").innerHTML= video.volume*100 + "%"
 
 
 });
