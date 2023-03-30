@@ -17,6 +17,13 @@ document.querySelector("#pause").addEventListener("click", function() {
 	video.pause()
 });
 
+document.querySelector("#skip").addEventListener("click", function() {
+	console.log("Skip ahead");
+	video.currentTime += 15
+	if (video.currentTime >= video.duration)
+		video.currentTime = 0
+		console.log("Current time is" + video.currentTime)
+});
 document.querySelector("#slower").addEventListener("click", function() {
 	console.log("Slow Down");
 	video.playbackRate *= 0.95;
